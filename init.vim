@@ -12,6 +12,12 @@ noremap æn :cnext<CR>
 noremap æp :cprev<CR>
 noremap æj :.cc<CR>
 
+" tabs
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.config/nvim/plugged')
 
