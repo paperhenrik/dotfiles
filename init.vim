@@ -22,12 +22,15 @@ set expandtab
 call plug#begin('~/.config/nvim/plugged')
 
 " Declare the list of plugins.
-Plug 'altercation/vim-colors-solarized'
 Plug 'scrooloose/nerdtree'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'chriskempson/base16-vim'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
 " Auto hide 
 set hidden
+
+let base16colorspace=256  " Access colors present in 256 colorspace
+colorscheme base16-default-dark
