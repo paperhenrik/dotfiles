@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/henrik/.oh-my-zsh
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -53,7 +53,7 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/henrik/bin:/usr/local/share/dotnet"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin:/usr/local/share/dotnet"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -83,11 +83,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/henrik/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/henrik/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/henrik/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/henrik/google-cloud-sdk/completion.zsh.inc'; fi
 export PATH="/usr/local/sbin:$PATH"
 
 export DOCKER_REGISTRY_PASSWORD="=/D///LP=CywZS=++wYPMwnWKs7Sk8yd"
@@ -105,3 +100,9 @@ bindkey -v
 export KEYTIMEOUT=1
 # Allow delte when in vi insert mode
 bindkey "^?" backward-delete-char
+
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        eval "$("$BASE16_SHELL/profile_helper.sh")"
