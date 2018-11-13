@@ -35,6 +35,7 @@ Plug 'tpope/vim-commentary'
 Plug 'vim-scripts/argtextobj.vim'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'mileszs/ack.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -47,3 +48,5 @@ if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
 endif
+
+let g:ackprg = "ag --vimgrep"

@@ -109,3 +109,9 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
         eval "$("$BASE16_SHELL/profile_helper.sh")"
 export PATH="/usr/local/opt/ncurses/bin:$PATH"
+
+# search in history
+bindkey "^R" history-incremental-search-backward
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
